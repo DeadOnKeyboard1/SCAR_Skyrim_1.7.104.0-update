@@ -1,0 +1,7 @@
+build/
+.vs/
+out/
+dist/
+build-logs/
+*.user
+*.suo

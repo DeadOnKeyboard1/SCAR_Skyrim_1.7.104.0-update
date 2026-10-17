@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "name": "SCAR",
+  "version": "1.0.9",
+  "buildSystem": "cmake",
+  "commonLib": {"version": "12.1.0"},
+  "requireMsvc": true,
+  "requirePdb": true,
+  "privateTestSymbols": "full-pdb-user-exception",
+  "preBuildScript": "build-hooks/prebuild.ps1",
+  "postBuildScript": "build-hooks/postbuild.ps1",
+  "cmake": {
+    "configureArgs": ["-S", ".", "-B", "build/phase1", "-G", "Ninja", "-DCMAKE_BUILD_TYPE=Release", "-DSCAR_PHASE1_BUILD=ON", "-DSKSEPluginAuthor=Maxsu"],
+    "buildArgs": ["--build", "build/phase1", "--parallel", "6"]
+  },
+  "artifacts": {"dll": "build/phase1/SCAR.dll", "pdb": "build/phase1/SCAR.pdb"},
+  "package": {"enabled": false},
+  "validation": {
+    "privacy": true,
+    "skseDeclaration": true,
+    "structDependent": true,
+    "requireAddressLibraryV5": true
+  }
+}

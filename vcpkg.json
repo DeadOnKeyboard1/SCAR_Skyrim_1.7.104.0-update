@@ -1,0 +1,39 @@
+{
+  "name": "scar",
+  "version-string": "1.0.0",
+  "description": "",
+  "license": "GPL-3.0-or-later",
+  "dependencies": [
+    "fast-cpp-csv-parser",
+    {
+      "name": "fmt",
+      "version>=": "12.1.0"
+    },
+    "rsm-binary-io",
+    "rapidcsv",
+    {
+      "name": "spdlog",
+      "version>=": "1.16.0"
+    },
+    "nlohmann-json",
+    "simpleini",
+    "tomlplusplus",
+    "xbyak",
+    "effolkronium-random",
+    "glm",
+    {
+      "name": "directxmath",
+      "version>=": "2025-04-03"
+    },
+    {
+      "name": "directxtk",
+      "version>=": "2025-10-27"
+    }
+  ],
+  "features": {
+    "mo2-install": {
+      "description": "SCAR"
+    }
+  },
+  "builtin-baseline": "ee12231b20c95013c6638d845d04c91559a1d1ff"
+}
